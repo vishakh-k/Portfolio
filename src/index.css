@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-gray-800 dark:text-gray-200;
+    @apply text-gray-800 dark:text-gray-200 font-poppins;
   }
 }
 
@@ -12,8 +12,26 @@
   .btn {
     @apply px-4 py-2 rounded-md transition-colors duration-200;
   }
-  
+
   .btn-primary {
     @apply bg-indigo-600 text-white hover:bg-indigo-700;
   }
-} 
+}
+
+/* Custom gradient animation */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
